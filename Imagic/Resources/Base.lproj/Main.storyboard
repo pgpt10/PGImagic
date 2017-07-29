@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mMj-Lm-Aah">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Picker View Controller-->
+        <scene sceneID="4vk-A5-EJD">
+            <objects>
+                <viewController id="mMj-Lm-Aah" customClass="IMImagePickerViewController" customModule="Imagic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XOX-5L-xfg"/>
+                        <viewControllerLayoutGuide type="bottom" id="rhM-1X-1W5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="of9-uo-ZGo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ag1-Sz-6Nu">
+                        <barButtonItem key="rightBarButtonItem" image="camera" id="mnd-AA-nOA">
+                            <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showCameraOrGallery:" destination="mMj-Lm-Aah" id="khf-PN-iCr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HhX-3N-xvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="134"/>
+        </scene>
+        <!--Processing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="IMProcessingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="IMProcessingViewController" customModule="Imagic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvI-5Q-maJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="toggleImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pVj-r5-LoJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestImage" translatesAutoresizingMaskIntoConstraints="NO" id="smg-tF-eYI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a4n-ch-xwq">
+                                <rect key="frame" x="10" y="529" width="355" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="dxn-y6-FxX"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ajA-Ps-X6f">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5Fu-RL-Rlc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mMX-hO-xu0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="smg-tF-eYI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1hE-Qu-vzQ"/>
+                            <constraint firstItem="a4n-ch-xwq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="6Wm-da-qav"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a4n-ch-xwq" secondAttribute="bottom" constant="10" id="PP1-bv-uwc"/>
+                            <constraint firstAttribute="trailing" secondItem="a4n-ch-xwq" secondAttribute="trailing" constant="10" id="QgT-6t-f0b"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="smg-tF-eYI" secondAttribute="bottom" id="QpY-wB-eZC"/>
+                            <constraint firstItem="WvI-5Q-maJ" firstAttribute="leading" secondItem="smg-tF-eYI" secondAttribute="leading" id="WA4-2A-twz"/>
+                            <constraint firstItem="WvI-5Q-maJ" firstAttribute="top" secondItem="smg-tF-eYI" secondAttribute="top" id="YXC-Wh-07C"/>
+                            <constraint firstItem="WvI-5Q-maJ" firstAttribute="bottom" secondItem="smg-tF-eYI" secondAttribute="bottom" id="Z4h-n3-Cmv"/>
+                            <constraint firstItem="WvI-5Q-maJ" firstAttribute="trailing" secondItem="smg-tF-eYI" secondAttribute="trailing" id="n3C-ae-3bM"/>
+                            <constraint firstItem="smg-tF-eYI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uij-ld-LnL"/>
+                            <constraint firstAttribute="trailing" secondItem="smg-tF-eYI" secondAttribute="trailing" id="uv0-DP-poj"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="contentCollectionView" destination="a4n-ch-xwq" id="0PS-to-owy"/>
+                        <outlet property="imageView" destination="smg-tF-eYI" id="moc-W7-XMb"/>
+                        <outlet property="toggleButton" destination="WvI-5Q-maJ" id="fgp-s4-M9T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TestImage" width="540" height="960"/>
+        <image name="camera" width="24" height="24"/>
+    </resources>
+</document>

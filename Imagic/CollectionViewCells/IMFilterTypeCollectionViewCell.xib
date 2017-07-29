@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IMFilterTypeCollectionViewCell" id="gqu-Tp-3ce" customClass="IMFilterTypeCollectionViewCell" customModule="Imagic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="171" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="process" translatesAutoresizingMaskIntoConstraints="NO" id="Eox-og-59l">
+                        <rect key="frame" x="0.0" y="0.0" width="171" height="157"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.39919777684563756" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdy-X3-suf">
+                        <rect key="frame" x="0.0" y="127" width="171" height="30"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.73594798657718119" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="SgX-b8-cmb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="CrT-XT-XH0">
+                        <rect key="frame" x="146" y="5" width="20" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ByP-5Q-fQt"/>
+                            <constraint firstAttribute="width" constant="20" id="N1z-Pw-FYz"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Mdy-X3-suf" firstAttribute="leading" secondItem="gqu-Tp-3ce" secondAttribute="leading" id="1xw-cC-7QF"/>
+                <constraint firstItem="CrT-XT-XH0" firstAttribute="top" secondItem="gqu-Tp-3ce" secondAttribute="top" constant="5" id="2oy-nT-ceV"/>
+                <constraint firstAttribute="trailing" secondItem="Eox-og-59l" secondAttribute="trailing" id="Ggb-z2-Jtm"/>
+                <constraint firstAttribute="bottom" secondItem="Mdy-X3-suf" secondAttribute="bottom" id="Ltp-a8-YMv"/>
+                <constraint firstAttribute="trailing" secondItem="Mdy-X3-suf" secondAttribute="trailing" id="S63-yv-5lr"/>
+                <constraint firstAttribute="bottom" secondItem="Eox-og-59l" secondAttribute="bottom" id="hrg-qy-V2F"/>
+                <constraint firstItem="Eox-og-59l" firstAttribute="top" secondItem="gqu-Tp-3ce" secondAttribute="top" id="ond-xy-tWH"/>
+                <constraint firstAttribute="trailing" secondItem="CrT-XT-XH0" secondAttribute="trailing" constant="5" id="pFz-rw-tOj"/>
+                <constraint firstItem="Eox-og-59l" firstAttribute="leading" secondItem="gqu-Tp-3ce" secondAttribute="leading" id="vU4-3s-IDr"/>
+            </constraints>
+            <size key="customSize" width="171" height="157"/>
+            <connections>
+                <outlet property="filterTypeImageView" destination="Eox-og-59l" id="Scx-Wx-GBj"/>
+                <outlet property="filterTypeLabel" destination="Mdy-X3-suf" id="tEY-6p-OaG"/>
+                <outlet property="tickImageView" destination="CrT-XT-XH0" id="IDd-fD-ed9"/>
+            </connections>
+            <point key="canvasLocation" x="79.5" y="141.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="process" width="369" height="369"/>
+        <image name="tick" width="36" height="36"/>
+    </resources>
+</document>
