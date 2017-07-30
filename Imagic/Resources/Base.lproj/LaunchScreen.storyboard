@@ -4,15 +4,9 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="OpenSans-Semibold.ttf">
-            <string>OpenSans-Semibold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -29,35 +23,13 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="NJV-37-x9v">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSE-30-lTY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ImagiC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yl-n7-TTq">
-                                        <rect key="frame" x="96.5" y="294" width="182.5" height="79"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="55"/>
-                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="shadowOffset" width="0.0" height="4"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.62418729026845643" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="6Yl-n7-TTq" firstAttribute="centerX" secondItem="bSE-30-lTY" secondAttribute="centerX" id="aRk-QX-o9F"/>
-                                    <constraint firstItem="6Yl-n7-TTq" firstAttribute="centerY" secondItem="bSE-30-lTY" secondAttribute="centerY" id="xA8-JQ-6zs"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NJV-37-x9v" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="8JT-UU-gJj"/>
                             <constraint firstAttribute="trailing" secondItem="NJV-37-x9v" secondAttribute="trailing" id="HHZ-F3-zNX"/>
-                            <constraint firstItem="bSE-30-lTY" firstAttribute="bottom" secondItem="NJV-37-x9v" secondAttribute="bottom" id="Qfl-4F-Wxb"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="NJV-37-x9v" secondAttribute="bottom" id="RsQ-uK-W0T"/>
                             <constraint firstItem="NJV-37-x9v" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Zry-A8-ePC"/>
-                            <constraint firstItem="bSE-30-lTY" firstAttribute="trailing" secondItem="NJV-37-x9v" secondAttribute="trailing" id="bLU-fh-ldb"/>
-                            <constraint firstItem="bSE-30-lTY" firstAttribute="top" secondItem="NJV-37-x9v" secondAttribute="top" id="nhQ-9c-r3T"/>
-                            <constraint firstItem="bSE-30-lTY" firstAttribute="leading" secondItem="NJV-37-x9v" secondAttribute="leading" id="tvZ-HN-zJz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -67,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchImage" width="914" height="640"/>
+        <image name="launchImage" width="414" height="736"/>
     </resources>
 </document>

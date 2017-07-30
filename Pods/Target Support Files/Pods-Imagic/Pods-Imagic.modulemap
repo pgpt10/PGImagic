@@ -1,0 +1,6 @@
+framework module Pods_Imagic {
+  umbrella header "Pods-Imagic-umbrella.h"
+
+  export *
+  module * { export * }
+}
