@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,14 +21,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ag1-Sz-6Nu">
-                        <barButtonItem key="rightBarButtonItem" image="camera" id="mnd-AA-nOA">
-                            <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="showCameraOrGallery:" destination="mMj-Lm-Aah" id="khf-PN-iCr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhX-3N-xvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,6 +96,5 @@
     </scenes>
     <resources>
         <image name="TestImage" width="540" height="960"/>
-        <image name="camera" width="24" height="24"/>
     </resources>
 </document>

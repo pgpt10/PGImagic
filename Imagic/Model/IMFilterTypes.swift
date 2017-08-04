@@ -8,7 +8,7 @@
 
 import Foundation
 
-let filters: [FilterType] = [.none, .process, .fade, .instant, .mono, .noir, .chrome, .sepia, .tonal, .transfer, .falseColor]
+let filters: [FilterType] = [.none, .tonal, .mono, .noir, .instant, .fade, .chrome, .transfer, .process, .falseColor, .sepia]
 
 enum FilterType: String
 {
